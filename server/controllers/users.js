@@ -2,7 +2,7 @@ const oauth = require('../helpers/oauth')
 
 const getTimeline = (req, res) =>{
     oauth.get(
-      'https://api.twitter.com/1.1/statuses/user_timeline.json',
+      'https://api.twitter.com/1.1/statuses/home_timeline.json',
       '382156493-TkS1PbW74Vo5Cxq4EKxsc8oMYJWt0cVWidOffn2N', //test user token 
       '2sYjEXhVKC3lmjqP8O2KOpQABDUpG2XpfCkkaNkpKY68I', //test user secret           
       function (err, data, response){
