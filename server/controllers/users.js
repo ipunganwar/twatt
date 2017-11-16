@@ -15,8 +15,9 @@ const getTimeline = (req, res) =>{
 
 const findTweet = (req, res)=> {
   // res.send(req.query)
+  console.log(req.body)
     oauth.get(
-      `https://api.twitter.com/1.1/search/tweets.json?q=%40${req.query.search}`,
+      `https://api.twitter.com/1.1/search/tweets.json?q=%40${req.body.search}`,
       '382156493-TkS1PbW74Vo5Cxq4EKxsc8oMYJWt0cVWidOffn2N', //test user token 
       '2sYjEXhVKC3lmjqP8O2KOpQABDUpG2XpfCkkaNkpKY68I', //test user secret           
       function (err, data, response){
